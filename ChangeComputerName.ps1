@@ -152,6 +152,7 @@ function Show-ChangeComputerName_psf
 	$radiobuttonRestart.UseCompatibleTextRendering = $True
 	$radiobuttonRestart.UseVisualStyleBackColor = $True
 	$radiobuttonRestart.add_CheckedChanged($radiobuttonRestart_CheckedChanged)
+	$radiobuttonRestart.Checked = $True
 
 	# radiobuttonShutdown
 	$radiobuttonShutdown.Location = '20, 19'
@@ -179,7 +180,9 @@ function Show-ChangeComputerName_psf
 	$textboxComputerName.Size = '174, 20'
 	$textboxComputerName.TabIndex = 2
 	$textboxComputerName.add_TextChanged($textboxComputerName_TextChanged)
-
+	$CurrentComputerName = $env:computername
+	$textboxComputerName.Text = $CurrentComputerName
+	
 	# labelEnterPCName
 	$labelEnterPCName.AutoSize = $True
 	$labelEnterPCName.Location = '12, 9'
