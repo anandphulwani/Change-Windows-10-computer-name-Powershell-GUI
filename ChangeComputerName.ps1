@@ -55,8 +55,14 @@ function Show-ChangeComputerName_psf
 					# Set-ItemProperty -path "HKU:\.Default\Software\Microsoft\Windows Media\WMSDK\General" -name "Computername" -value $ComputerName
 					
 					# Restart or Shutdown
-					if ($radiobuttonRestart.Checked) { Restart-Computer }
-					if ($radiobuttonShutdown.Checked) { Stop-Computer }
+					if ($radiobuttonRestart.Checked) {
+						shutdown -f -r -t 15
+						# Restart-Computer 
+					}
+					if ($radiobuttonShutdown.Checked) {
+						shutdown -f -s -t 15
+						# Stop-Computer 
+					}
 				}
 				# If click No
 				'No' { <# Do nothing #> }
