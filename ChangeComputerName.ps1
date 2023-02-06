@@ -1,3 +1,37 @@
+﻿##[Ps1 To Exe]
+##
+##NcDBCIWOCzWE8pGP3wFk4Fn9fkkvY8yVsKWz1oCo8PjQnyDKQo4bWWhEnyX5Cl+edNZcUO0Q1A==
+##Kd3HDZOFADWE8uO1
+##Nc3NCtDXTlaDjofG5iZk2WrqT2ElZ9aPq7ezy5OA2+//sDHWWaY9Slt5qQr0BUW6XNEdWOUAoNQDexwnKrwC4b2w
+##Kd3HFJGZHWLWoLaVvnQnhQ==
+##LM/RF4eFHHGZ7/K1
+##K8rLFtDXTiW5
+##OsHQCZGeTiiZ49I=
+##OcrLFtDXTiS5
+##LM/BD5WYTiiZ4tI=
+##McvWDJ+OTiiZ4tI=
+##OMvOC56PFnzN8u+VslQ=
+##M9jHFoeYB2Hc8u+VslQ=
+##PdrWFpmIG2HcofKIo2QX
+##OMfRFJyLFzWE8uK1
+##KsfMAp/KUzWJ0g==
+##OsfOAYaPHGbQvbyVvnQX
+##LNzNAIWJGmPcoKHc7Do3uAuO
+##LNzNAIWJGnvYv7eVvnQX
+##M9zLA5mED3nfu77Q7TV64AuzAgg=
+##NcDWAYKED3nfu77Q7TV64AuzAgg=
+##OMvRB4KDHmHQvbyVvnQX
+##P8HPFJGEFzWE8tI=
+##KNzDAJWHD2fS8u+Vgw==
+##P8HSHYKDCX3N8u+Vgw==
+##LNzLEpGeC3fMu77Ro2k3hQ==
+##L97HB5mLAnfMu77Ro2k3hQ==
+##P8HPCZWEGmaZ7/K1
+##L8/UAdDXTlaDjofG5iZk2WrqT2ElZ9aPq7ezy5OA2+//sDHWWaY3QVV5kSzfC0atTOYXR9sUudQtdhUrIfUOwb3dC/K9QLAkk+56JeCWo9I=
+##Kc/BRM3KXxU=
+##
+##
+##fd6a9f26a06ea3bc99616d4851b372ba
 function Show-ChangeComputerName_psf
 {
 	# Import the Assemblies
@@ -56,13 +90,13 @@ function Show-ChangeComputerName_psf
 					
 					# Restart or Shutdown
 					if ($radiobuttonRestart.Checked) {
-						& shutdown -f -r -t 15
-						# & $env:p2eincfilepath\SilentCMD.exe shutdown -f -r -t 15
+						# & shutdown -f -r -t 15
+						& $env:p2eincfilepath\SilentCMD.exe shutdown -f -r -t 15
 						# Restart-Computer 
 					}
 					if ($radiobuttonShutdown.Checked) {
-						& shutdown -f -s -t 15
-						# & $env:p2eincfilepath\SilentCMD.exe shutdown -f -s -t 15
+						# & shutdown -f -s -t 15
+						& $env:p2eincfilepath\SilentCMD.exe shutdown -f -s -t 15
 						# Stop-Computer 
 					}
 				}
